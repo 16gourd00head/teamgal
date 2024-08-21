@@ -4,9 +4,6 @@ import datetime
 from pytz import timezone
 import os
 
-dotenv.load_dotenv('.env파일의 경로')
-
-
 bot = discord.Bot(intents=discord.Intents(guilds=True, voice_states=True, members=True))
 
 
