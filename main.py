@@ -2,7 +2,6 @@ import discord
 import random
 import datetime
 from pytz import timezone
-import dotenv
 import os
 
 dotenv.load_dotenv('.env파일의 경로')
@@ -118,4 +117,4 @@ async def muster(ctx: discord.ApplicationContext):
     except Exception as e:
         await ctx.followup.send(f"오류가 발생했습니다: {str(e)}")
     
-bot.run(os.environ.get("Token"))
+bot.run(os.getenv("Token"))
